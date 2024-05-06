@@ -1,0 +1,9 @@
+name: BossRobots
+version: '${project.version}'
+main: com.unclecole.bossrobots.BossRobots
+api-version: 1.17
+prefix: BossRobots
+authors: [ Cole ]
+depend: [ BossEnchants ]
+commands:
+  robots:

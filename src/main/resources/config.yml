@@ -1,0 +1,79 @@
+Interval: 60 #Every 60 seconds
+AllowedWorlds: [Plots]
+
+RobotMenu:
+  Title: "%type% Menu"
+  Size: 27
+  Items: #TYPES: "NONE, UPGRADE_EFFICIENCY, UPGRADE_FORTUNE, BANK_WITHDRAW, ROBOT_PICKUP"
+    UpgradeEff:
+      Type: UPGRADE_EFFICIENCY
+      Material: DIAMOND_PICKAXE
+      Slot: 10
+      Durability:
+      CustomModelData:
+      Enchanted: true
+      Title: "&8&l| &aEfficiency Upgrade &8(&e%level%&8)"
+      Lore:
+        - "&6Levels: &e%level%/%maxlevel%"
+        - "&6Next Level Cost: &e%cost%"
+    UpgradeFortune:
+      Type: UPGRADE_FORTUNE
+      Material: EMERALD
+      Slot: 12
+      Durability:
+      CustomModelData:
+      Enchanted: true
+      Title: "&8&l| &aFortune Upgrade &8(&e%level%&8)"
+      Lore:
+        - "&6Levels: &e%level%/%maxlevel%"
+        - "&6Next Level Cost: &e%cost%"
+    WithdrawBank:
+      Type: BANK_WITHDRAW
+      Material: BOOK
+      Slot: 14
+      Durability:
+      CustomModelData:
+      Enchanted: true
+      Title: "&8&l| &fBank : &8(&e%amount%&8)"
+      Lore:
+        - "&8&m-----------------"
+        - "&fClick to deposit tokens!"
+        - "&8&m-----------------"
+    Pickup:
+      Type: ROBOT_PICKUP
+      Material: EXPERIENCE_BOTTLE
+      Slot: 16
+      Durability:
+      CustomModelData:
+      Enchanted: true
+      Title: "&c&lROBOT PICKUP"
+      Lore:
+        - "&8&m-----------------"
+        - "&fClick to pickup robot!"
+        - "&8&m-----------------"
+
+Robots:
+  Iron:
+    Physical: #Item Used to Spawn Robot
+      Material: TURTLE_SPAWN_EGG
+      Name: "&a&lIRON"
+      Lore:
+        - "&a&l1"
+        - "&f&L2"
+      Enchanted: true
+    ArmorStand: #The Robot thats then spawned in
+      Animation: false #Currently No Animation.
+      Material: IRON_BLOCK #Block that spawns in front of robot
+      IN_HAND: IRON_PICKAXE
+      Helmet: IRON_HELMET
+      Chestplate: IRON_CHESTPLATE
+      Leggings: IRON_LEGGINGS
+      Boots: IRON_BOOTS
+      Name: "&fIron Robot"
+      MoneyPerMinute: 10.0
+      EffMaxLevel: 50
+      FortuneMaxLevel: 100
+      DefaultCostEff: 1000
+      DefaultCostFortune: 1000
+      CostMultiEff: 1.25
+      CostMultiFortune: 1.25
